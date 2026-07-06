@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Descubre las últimas tendencias en moda para mujeres y hombres en Estilo de Moda SA. Explora nuestra amplia selección de ropa, bolsos, joyería y más. Eleva tu estilo con nuestras colecciones seleccionadas.">
+    <meta name="keywords"
+        content="ropa, mujeres, hombres, moda, bolsos, joyería, Estilo de Moda SA, últimas tendencias, prendas elegantes, accesorios">
+    <meta name="author" content="Deyvi Sanchez">
+    <link rel="icon" href="images/logowhite.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/main.css">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Estilo de Moda SA</title>
+</head>
+
+<body>
+    <header class="container" id="header">
+        <div class="header_top">
+            <div class="header_social">
+                <a href="https://www.instagram.com/sheinofficial/ instagram.com" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="https://www.facebook.com/SHEINOFFICIAL/ facebook.com" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href=" https://whatsapp.com/channel/0029Vao4A95HbFVFZ6M14A2Y" target="_blank">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+            </div>
+            <img src="images/logo_block.jpg" alt="page logo" id="logo">
+            <div class="header_actions">
+                <div id="display_login">
+                    <a href="#" id="logout" onclick="logout();">
+                        <span id="signout">Cerrar sesión</span>
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </a>
+                </div>
+                <a href="login.html" title="Iniciar sesión" id="login_btn">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                </a>
+                <a href="#" class="icon-cart">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <span id="cart-counter">0</span>
+                </a>
+            </div>
+        </div>
+        <nav id="navbar">
+            <menu>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="products.html">Tienda</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </menu>
+        </nav>
+    </header>
+    <button id="scrollBtn"><ion-icon name="arrow-up-outline" id="btn-up"></ion-icon></button>
+    <!-- slider -->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <div class="slide-content">
+                    <img src="images/background/slide16_bdfdea89-9df3-48da-9f0a-888fd50a83d5.webp">
+                    <div class="text">
+                        <h2>Obtén hasta 30% de descuento en los nuevos lanzamientos</h2>
+                        <a href="products.html" class="shop-btn">Comprar ahora</a>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <img src="images/background/background2.webp">
+                    <div class="text">
+                        <h2>Obtén hasta 30% de descuento en los nuevos lanzamientos</h2>
+                        <a href="products.html" class="shop-btn">Comprar ahora</a>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <img src="images/background/background3.webp">
+                    <div class="text">
+                        <h2>Obtén hasta 30% de descuento en los nuevos lanzamientos</h2>
+                        <a href="products.html" class="shop-btn">Comprar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <button class="prev" onclick="prevSlider();">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+            </button>
+            <button class="next" onclick="nextSlider();">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+    <div class="hero_for_phone">
+        <div class="hero-content">
+            <img src="images/background/phone.webp">
+            <div class="text">
+                <h2>Colección mini</h2>
+                <p>Colorea el verano con rosa fucsia y rosa chicle</p>
+                <a href="products.html" class="shop-btn">Comprar ahora</a>
+            </div>
+        </div>
+    </div>
+    <!-- cart -->
+    <div class="cart-section">
+        <div class="cart-header">
+            <h2>CARRITO DE COMPRAS</h2>
+            <div class="closeCart">
+                <ion-icon name="close-outline" id="closeCart"></ion-icon>
+            </div>
+        </div>
+        <div class="cart_products">
+            <!-- add cart products in js -->
+        </div>
+        <div class="cart_total">
+            <h3>Total:</h3>
+            <span id="total_price"></span>
+        </div>
+        <div class="btn_control">
+            <button class="viewCart" onclick="viewCart();">Ver carrito</button>
+            <button class="checkout" onclick="checkOut();">Finalizar compra</button>
+        </div>
+    </div>
+    <!-- info -->
+    <div class="information">
+        <div class="info">
+            <div class="info-icon">
+                <img src="images/global-distribution.png" alt="global-distribution">
+            </div>
+            <div class="info-text">
+                <h3>Envío a nivel mundial</h3>
+                <p>Envío gratis en todos los pedidos o en pedidos superiores a $100</p>
+            </div>
+        </div>
+        <div class="info">
+            <div class="info-icon">
+                <img src="images/delivery-status.png" alt="delivery-status">
+            </div>
+            <div class="info-text">
+                <h3>Devolución en 14 días</h3>
+                <p>Simplemente devuélvelo en un plazo de 30 días para un cambio.</p>
+            </div>
+        </div>
+        <div class="info">
+            <div class="info-icon">
+                <img src="images/check.png" alt="Security">
+            </div>
+            <div class="info-text">
+                <h3>Pago seguro</h3>
+                <p>Garantizamos pagos seguros con PEV</p>
+            </div>
+        </div>
+        <div class="info">
+            <div class="info-icon">
+                <img src="images/24-hours-support.png" alt="24-hours-support">
+            </div>
+            <div class="info-text">
+                <h3>Soporte 24/7</h3>
+                <p>Contáctanos las 24 horas, los 7 días de la semana</p>
+            </div>
+        </div>
+    </div>
+    <!-- Top Products -->
+    <div class="top_products">
+        <div class="container">
+            <div class="header">
+                <h3>Productos destacados</h3>
+                <p>Sigue las tendencias más populares y consigue artículos exclusivos en nuestra tienda.</p>
+            </div>
+            <div class="products">
+                <!-- add by js -->
+            </div>
+        </div>
+    </div>
+    <!-- collection -->
+    <div class="collection" id="collection" aria-label="collection" data-section>
+        <div class="container">
+            <ul class="collection-list">
+                <li>
+                    <div class="collection-card has-before hover:shine">
+
+                        <h2 class="card-title">Colección de verano</h2>
+
+                        <p class="card-text">Desde $17.99</p>
+
+                        <a href="products.html" class="btn-link">
+                            <span>Comprar ahora</span>
+
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </a>
+
+                        <div class="has-bg-image" style="background-image: url('images/background/banner1.webp')"></div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="collection-card has-before hover:shine">
+
+                        <h2 class="card-title">¿Qué hay de nuevo?</h2>
+
+                        <p class="card-text">Destaca con estilo</p>
+
+                        <a href="#" class="btn-link">
+                            <span>Descubre ahora</span>
+
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </a>
+
+                        <div class="has-bg-image" style="background-image: url('images/background/banner2.webp')"></div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="collection-card has-before hover:shine">
+
+                        <h2 class="card-title">Lleva 1 y paga 1</h2>
+
+                        <p class="card-text">Desde $7.99</p>
+
+                        <a href="#" class="btn-link">
+                            <span>Descubre ahora</span>
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </a>
+
+                        <div class="has-bg-image" style="background-image: url('images/background/banner3.webp')"></div>
+
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- news -->
+    <div class="news hight">
+        <div class="news-text">
+            <h4>Boletín</h4>
+            <p>
+                Suscríbete a nuestro boletín y obtén 20% de descuento en tu primera compra
+            </p>
+        </div>
+        <div class="Subscribe-form">
+            <input type="email" name="email" placeholder="Ingresa tu correo" autocomplete="off">
+            <button type="submit" value="submit">
+                <img src="images/send.png" alt="send-data" width="30" />
+            </button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="images/logo_block.jpg" alt="logo" width="140">
+                <p>El cliente es el centro de nuestro modelo de negocio único, que incluye diseño.</p>
+            </div>
+            <div class="footer-list">
+                <div class="list">
+                    <h4>COMPRAS</h4>
+                    <ul>
+                        <li><a href="#">Tienda de ropa</a></li>
+                        <li><a href="#">Zapatos en tendencia</a></li>
+                        <li><a href="#">Accesorios</a></li>
+                        <li><a href="#">Rebajas</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h4>Atención al cliente</h4>
+                    <ul>
+                        <li><a href="#">Contáctanos</a></li>
+                        <li><a href="#">Métodos de pago</a></li>
+                        <li><a href="#">Envío</a></li>
+                        <li><a href="#">Devoluciones y cambios</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-company-name">
+                © 2026 Todos los derechos reservados. Desarrollado por <a href="#" id="author">DEYVI SANCHEZ</a>
+            </p>
+        </div>
+    </footer>
+    <script src="JavaScript/index.js"></script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/cart.js"></script>
+</body>
+
+</html>
